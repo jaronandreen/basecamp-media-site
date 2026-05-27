@@ -8,6 +8,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  html, body { 
+    background: #0D0D0B !important; 
+    color: #F0EBE0 !important;
+    min-height: 100vh;
+  }
+  /* Force all section backgrounds dark */
+  section, main, nav, footer, div { 
+    background-color: inherit; 
+  }
   :root {
     --black:   #0D0D0B;
     --dark:    #141410;
@@ -24,20 +33,20 @@
     --red:     #C0392B;
     --gold:    #D4A017;
   }
- 
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
   html { scroll-behavior: smooth; }
- 
+
   body {
-    background: var(--black);
-    color: var(--cream);
+    background: #0D0D0B !important;
+    color: #F0EBE0;
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
     line-height: 1.6;
     overflow-x: hidden;
   }
- 
+
   /* ── NAV ─────────────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -51,7 +60,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.12em;
-    color: var(--cream);
+    color: #F0EBE0;
     text-decoration: none;
   }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -59,23 +68,23 @@
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: #C8BA9E;
     text-decoration: none;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--amber2); }
+  .nav-links a:hover { color: #E8A050; }
   .nav-cta {
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     padding: 0.5rem 1.2rem;
     border: 0.5px solid var(--amber);
-    color: var(--amber);
+    color: #C8873A;
     text-decoration: none;
     transition: all 0.2s;
   }
-  .nav-cta:hover { background: var(--amber); color: var(--black); }
- 
+  .nav-cta:hover { background: #C8873A; color: #0D0D0B; }
+
   /* ── HERO ─────────────────────────────────────────── */
   .hero {
     min-height: 52vh;
@@ -97,7 +106,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--moss);
+    color: #8BA870;
     margin-bottom: 1rem;
     position: relative;
   }
@@ -105,7 +114,7 @@
     content: '';
     display: inline-block;
     width: 2rem; height: 0.5px;
-    background: var(--moss);
+    background: #141410;
     vertical-align: middle;
     margin-right: 0.75rem;
   }
@@ -114,13 +123,13 @@
     font-size: clamp(4rem, 10vw, 8rem);
     line-height: 0.9;
     letter-spacing: 0.04em;
-    color: var(--white);
+    color: #FAF8F3;
     position: relative;
   }
-  h1 span { color: var(--amber); }
+  h1 span { color: #C8873A; }
   .hero-sub {
     font-size: 0.95rem;
-    color: var(--tan);
+    color: #C8BA9E;
     max-width: 560px;
     margin-top: 1.5rem;
     position: relative;
@@ -134,19 +143,19 @@
   .hero-stat-n {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
-    color: var(--amber);
+    color: #C8873A;
     line-height: 1;
   }
   .hero-stat-l {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: #C8BA9E;
   }
- 
+
   /* ── EMAIL CAPTURE ───────────────────────────────── */
   .email-strip {
-    background: var(--olive);
+    background: #3D4A2E;
     padding: 2rem 2.5rem;
     display: flex; align-items: center; justify-content: space-between;
     gap: 2rem; flex-wrap: wrap;
@@ -158,7 +167,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.08em;
-    color: var(--white);
+    color: #FAF8F3;
     margin-bottom: 0.25rem;
   }
   .email-strip-text span { font-size: 0.8rem; color: rgba(240,235,224,0.7); }
@@ -169,7 +178,7 @@
     background: rgba(0,0,0,0.3);
     border: 0.5px solid rgba(200,186,158,0.3);
     border-right: none;
-    color: var(--cream);
+    color: #F0EBE0;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.85rem;
     outline: none;
@@ -177,9 +186,9 @@
   .email-form input::placeholder { color: rgba(200,186,158,0.4); }
   .email-form button {
     padding: 0.75rem 1.5rem;
-    background: var(--amber);
+    background: #C8873A;
     border: none;
-    color: var(--black);
+    color: #0D0D0B;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.72rem;
     font-weight: 500;
@@ -189,18 +198,18 @@
     transition: background 0.2s;
     white-space: nowrap;
   }
-  .email-form button:hover { background: var(--amber2); }
- 
+  .email-form button:hover { background: #E8A050; }
+
   /* ── MAIN LAYOUT ─────────────────────────────────── */
   main { padding: 0 2.5rem 6rem; max-width: 1400px; margin: 0 auto; }
- 
+
   /* ── FEATURED STRIP ──────────────────────────────── */
   .section-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--moss);
+    color: #8BA870;
     padding: 3rem 0 1.5rem;
     display: flex; align-items: center; gap: 1rem;
   }
@@ -209,7 +218,7 @@
     flex: 1; height: 0.5px;
     background: rgba(200,186,158,0.12);
   }
- 
+
   .featured-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -219,7 +228,7 @@
     margin-bottom: 0.5px;
   }
   .featured-card {
-    background: var(--bark);
+    background: #1E1D18;
     padding: 2rem;
     display: flex; gap: 1.5rem; align-items: flex-start;
     transition: background 0.2s;
@@ -232,10 +241,10 @@
     height: 2px;
     background: linear-gradient(90deg, var(--amber), transparent);
   }
-  .featured-card:hover { background: var(--mud); }
+  .featured-card:hover { background: #2A2920; }
   .featured-icon {
     width: 64px; height: 64px; min-width: 64px;
-    background: var(--olive);
+    background: #3D4A2E;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.6rem;
   }
@@ -244,20 +253,20 @@
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: #C8873A;
     margin-bottom: 0.4rem;
   }
   .featured-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.06em;
-    color: var(--white);
+    color: #FAF8F3;
     margin-bottom: 0.4rem;
   }
-  .featured-brand { font-size: 0.72rem; color: var(--tan); margin-bottom: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .featured-brand { font-size: 0.72rem; color: #C8BA9E; margin-bottom: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; }
   .featured-take { font-size: 0.82rem; color: rgba(240,235,224,0.7); line-height: 1.6; margin-bottom: 1rem; }
   .featured-rating { display: flex; gap: 2px; margin-bottom: 1rem; }
-  .star { color: var(--amber); font-size: 0.7rem; }
+  .star { color: #C8873A; font-size: 0.7rem; }
   .star.empty { color: rgba(200,186,158,0.2); }
   .link-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
   .link-btn {
@@ -266,20 +275,20 @@
     text-transform: uppercase;
     padding: 0.45rem 0.9rem;
     border: 0.5px solid rgba(200,186,158,0.25);
-    color: var(--tan);
+    color: #C8BA9E;
     text-decoration: none;
     transition: all 0.2s;
     font-family: 'DM Mono', monospace;
   }
-  .link-btn:hover { border-color: var(--amber); color: var(--amber); }
+  .link-btn:hover { border-color: #C8873A; color: #C8873A; }
   .link-btn.primary {
-    background: var(--amber);
-    border-color: var(--amber);
-    color: var(--black);
+    background: #C8873A;
+    border-color: #C8873A;
+    color: #0D0D0B;
     font-weight: 500;
   }
-  .link-btn.primary:hover { background: var(--amber2); border-color: var(--amber2); }
- 
+  .link-btn.primary:hover { background: #E8A050; border-color: #E8A050; }
+
   /* ── FILTERS ─────────────────────────────────────── */
   .filter-row {
     display: flex; gap: 0.5rem; flex-wrap: wrap;
@@ -294,14 +303,14 @@
     text-transform: uppercase;
     padding: 0.5rem 1.1rem;
     border: 0.5px solid rgba(200,186,158,0.2);
-    color: var(--tan);
+    color: #C8BA9E;
     background: transparent;
     cursor: pointer;
     transition: all 0.2s;
   }
-  .filter-btn:hover { border-color: var(--moss); color: var(--moss); }
-  .filter-btn.active { background: var(--olive); border-color: var(--olive2); color: var(--white); }
- 
+  .filter-btn:hover { border-color: #8BA870; color: #8BA870; }
+  .filter-btn.active { background: #3D4A2E; border-color: #5C6E45; color: #FAF8F3; }
+
   /* ── CATEGORY SECTION ────────────────────────────── */
   .cat-section { margin-bottom: 3.5rem; }
   .cat-header {
@@ -314,15 +323,15 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.6rem;
     letter-spacing: 0.08em;
-    color: var(--white);
+    color: #FAF8F3;
   }
   .cat-count {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.1em;
-    color: var(--moss);
+    color: #8BA870;
   }
- 
+
   /* ── GEAR GRID ───────────────────────────────────── */
   .gear-grid {
     display: grid;
@@ -331,39 +340,39 @@
     background: rgba(200,186,158,0.06);
   }
   .gear-card {
-    background: var(--dark);
+    background: #141410;
     padding: 1.25rem;
     transition: background 0.2s;
     cursor: default;
     display: flex; flex-direction: column;
   }
-  .gear-card:hover { background: var(--bark); }
+  .gear-card:hover { background: #1E1D18; }
   .gear-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
   .gear-cat-tag {
     font-family: 'DM Mono', monospace;
     font-size: 0.58rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--olive2);
+    color: #5C6E45;
   }
   .status-dot {
     width: 6px; height: 6px; border-radius: 50%;
-    background: var(--moss);
+    background: #141410;
     margin-top: 4px;
   }
-  .status-dot.wishlist { background: var(--gold); }
+  .status-dot.wishlist { background: #141410; }
   .status-dot.retired { background: rgba(200,186,158,0.2); }
   .gear-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.1rem;
     letter-spacing: 0.06em;
-    color: var(--white);
+    color: #FAF8F3;
     margin-bottom: 0.2rem;
     line-height: 1.1;
   }
   .gear-brand-sm {
     font-size: 0.68rem;
-    color: var(--tan);
+    color: #C8BA9E;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 0.6rem;
@@ -389,13 +398,13 @@
     text-decoration: none;
     transition: all 0.15s;
   }
-  .gear-link-sm:hover { border-color: var(--amber); color: var(--amber); }
+  .gear-link-sm:hover { border-color: #C8873A; color: #C8873A; }
   .gear-link-sm.p {
     background: rgba(200,135,58,0.15);
     border-color: rgba(200,135,58,0.4);
-    color: var(--amber);
+    color: #C8873A;
   }
- 
+
   /* ── BUNDLES STRIP ───────────────────────────────── */
   .bundles-section {
     margin-top: 5rem;
@@ -410,11 +419,11 @@
     margin-top: 1.5rem;
   }
   .bundle-card {
-    background: var(--bark);
+    background: #1E1D18;
     padding: 1.75rem;
     transition: background 0.2s;
   }
-  .bundle-card:hover { background: var(--mud); }
+  .bundle-card:hover { background: #2A2920; }
   .bundle-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
@@ -426,27 +435,27 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.3rem;
     letter-spacing: 0.06em;
-    color: var(--white);
+    color: #FAF8F3;
     margin-bottom: 0.5rem;
   }
-  .bundle-items { font-size: 0.75rem; color: var(--tan); line-height: 1.6; margin-bottom: 1.2rem; }
+  .bundle-items { font-size: 0.75rem; color: #C8BA9E; line-height: 1.6; margin-bottom: 1.2rem; }
   .bundle-link {
     font-family: 'DM Mono', monospace;
     font-size: 0.62rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: #C8873A;
     text-decoration: none;
     border-bottom: 0.5px solid var(--amber);
     padding-bottom: 1px;
     transition: color 0.2s;
   }
- 
+
   /* ── LOADING / EMPTY ─────────────────────────────── */
   .loading {
     display: flex; align-items: center; justify-content: center;
     min-height: 300px;
-    color: var(--tan);
+    color: #C8BA9E;
     font-family: 'DM Mono', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
@@ -456,12 +465,12 @@
   .spinner {
     width: 16px; height: 16px;
     border: 1.5px solid rgba(200,186,158,0.2);
-    border-top-color: var(--amber);
+    border-top-color: #C8873A;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
- 
+
   /* ── FOOTER ──────────────────────────────────────── */
   footer {
     border-top: 0.5px solid rgba(200,186,158,0.1);
@@ -473,12 +482,12 @@
     letter-spacing: 0.08em;
   }
   footer a { color: inherit; text-decoration: none; }
-  footer a:hover { color: var(--amber); }
- 
+  footer a:hover { color: #C8873A; }
+
   /* ── ANIMATIONS ──────────────────────────────────── */
   .fade-in { opacity: 0; transform: translateY(16px); animation: fadeUp 0.5s ease forwards; }
   @keyframes fadeUp { to { opacity: 1; transform: none; } }
- 
+
   @media (max-width: 768px) {
     nav { padding: 1rem 1.25rem; }
     .nav-links { display: none; }
@@ -490,19 +499,19 @@
 </style>
 </head>
 <body>
- 
+
 <nav>
   <a href="/" class="nav-logo">Basecamp Media</a>
   <ul class="nav-links">
-    <li><a href="/#gear">Gear Room</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/gear-locker" style="color:#C8873A">Gear Locker</a></li>
     <li><a href="/#blog">Adventures</a></li>
     <li><a href="/#social">Follow</a></li>
-    <li><a href="/#about">About</a></li>
     <li><a href="/#collab">Work With Us</a></li>
   </ul>
   <a href="#email-capture" class="nav-cta">Get the Gear List</a>
 </nav>
- 
+
 <!-- HERO -->
 <section class="hero">
   <p class="hero-eyebrow">Basecamp Media · Gear Locker</p>
@@ -514,7 +523,7 @@
     <div class="hero-stat"><span class="hero-stat-n" id="stat-cats">—</span><span class="hero-stat-l">Categories</span></div>
   </div>
 </section>
- 
+
 <!-- EMAIL CAPTURE -->
 <div class="email-strip" id="email-capture">
   <div class="email-strip-text">
@@ -526,44 +535,45 @@
     <button type="submit">Join the List</button>
   </form>
 </div>
- 
+
 <main>
   <!-- FEATURED -->
   <p class="section-label">Staff picks · Currently loving</p>
   <div class="featured-grid" id="featured-container">
     <div class="loading"><div class="spinner"></div>Loading gear...</div>
   </div>
- 
+
   <!-- FILTERS -->
   <p class="section-label" style="margin-top:3rem">All gear · Browse by category</p>
   <div class="filter-row" id="filter-row">
     <button class="filter-btn active" onclick="filterGear('All', this)">All</button>
   </div>
- 
+
   <!-- GEAR BY CATEGORY -->
   <div id="gear-container">
     <div class="loading"><div class="spinner"></div>Loading gear...</div>
   </div>
- 
+
   <!-- KIT BUNDLES -->
   <div class="bundles-section">
     <p class="section-label">Shop our kits · Curated bundles</p>
     <div class="bundles-grid" id="bundles-container"></div>
   </div>
 </main>
- 
+
 <footer>
   <span>© 2026 Basecamp Media LLC · Chattanooga, TN</span>
   <span>All affiliate links are disclosed per FTC guidelines · <a href="/">basecampoutdoors.netlify.app</a></span>
 </footer>
- 
+
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────
-const SHEET_ID  = '1RSgzaWNxYw3sjJl-jPAcWeYoPvRCyy1IWocftIUeHDs';
-const API_KEY   = 'AIzaSyAiSXdgbDcDMJPhkglfGMSJrDaurfeOWM8';
+// Replace these two values with your real Sheet ID and API key
+const SHEET_ID  = 'YOUR_SHEET_ID_HERE';
+const API_KEY   = 'YOUR_SHEETS_API_KEY_HERE';
 const SHEET_TAB = encodeURIComponent('⚙️ Gear Database');
 const API_URL   = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_TAB}!A3:S200?key=${API_KEY}`;
- 
+
 // ── COLUMN MAP (matches your spreadsheet exactly) ─────────────────────────
 // A=0  B=1  C=2  D=3  E=4  F=5  G=6  H=7  I=8  J=9
 // K=10 L=11 M=12 N=13 O=14 P=15 Q=16 R=17 S=18
@@ -574,7 +584,7 @@ const COL = {
   amazon:    12, ltk:      13, commission:14, contentstatus:15,
   blogurl:   16, notes:    17, dateadded: 18
 };
- 
+
 // ── CATEGORY ICONS ────────────────────────────────────────────────────────
 const CAT_ICONS = {
   'Recovery':    '🧊', 'Cycling':  '🚴', 'Moto':     '🏍️',
@@ -582,7 +592,7 @@ const CAT_ICONS = {
   'Paragliding': '🪂', 'Safety':   '🛡️', 'Apparel':  '👕',
   'default':     '🎒'
 };
- 
+
 // ── KIT BUNDLES (static — update manually) ────────────────────────────────
 const BUNDLES = [
   { num:'01', name:'The Recovery Stack',          items:'ORCA Cold Plunge · SISU Sauna · Theragun Pro' },
@@ -592,7 +602,7 @@ const BUNDLES = [
   { num:'05', name:'The Adventure Athlete Gym',   items:'Garage Gym · TRX · Weighted Vest · ORCA · SISU' },
   { num:'06', name:'The Paragliding Kit',         items:'Advance Wing + Harness · Safety gear · Filming setup' },
 ];
- 
+
 // ── HELPERS ───────────────────────────────────────────────────────────────
 function stars(rating) {
   const n = parseInt(rating) || 0;
@@ -600,7 +610,7 @@ function stars(rating) {
     `<span class="star ${i < n ? '' : 'empty'}">${i < n ? '★' : '☆'}</span>`
   ).join('');
 }
- 
+
 function linkBtns(aff, amz, ltk, size='sm') {
   const cls = size === 'sm' ? 'gear-link-sm' : 'link-btn';
   let html = '';
@@ -610,7 +620,7 @@ function linkBtns(aff, amz, ltk, size='sm') {
   if (!aff && !amz && !ltk) html += `<span class="${cls}" style="opacity:0.3;cursor:default">Link coming</span>`;
   return html;
 }
- 
+
 function statusClass(status) {
   if (!status) return '';
   const s = status.toLowerCase();
@@ -618,13 +628,13 @@ function statusClass(status) {
   if (s === 'retired')  return 'retired';
   return '';
 }
- 
+
 // ── RENDER FEATURED ───────────────────────────────────────────────────────
 function renderFeatured(items) {
   const container = document.getElementById('featured-container');
   const featured  = items.filter(r => r[COL.featured] === 'Y' && r[COL.status] === 'Current');
   if (!featured.length) { container.innerHTML = ''; return; }
- 
+
   container.innerHTML = featured.slice(0,4).map(r => `
     <div class="featured-card fade-in">
       <div class="featured-icon">${CAT_ICONS[r[COL.category]] || CAT_ICONS.default}</div>
@@ -642,19 +652,19 @@ function renderFeatured(items) {
     </div>
   `).join('');
 }
- 
+
 // ── RENDER GEAR GRID ──────────────────────────────────────────────────────
 let allItems = [];
 let activeFilter = 'All';
- 
+
 function renderGear(filter) {
   const container = document.getElementById('gear-container');
   activeFilter = filter;
- 
+
   const filtered = filter === 'All'
     ? allItems
     : allItems.filter(r => r[COL.category] === filter);
- 
+
   // Group by category
   const byCategory = {};
   filtered.forEach(r => {
@@ -662,12 +672,12 @@ function renderGear(filter) {
     if (!byCategory[cat]) byCategory[cat] = [];
     byCategory[cat].push(r);
   });
- 
+
   if (!Object.keys(byCategory).length) {
     container.innerHTML = `<div class="loading">No items found</div>`;
     return;
   }
- 
+
   container.innerHTML = Object.entries(byCategory).map(([cat, items]) => `
     <div class="cat-section fade-in">
       <div class="cat-header">
@@ -692,7 +702,7 @@ function renderGear(filter) {
     </div>
   `).join('');
 }
- 
+
 // ── RENDER FILTERS ────────────────────────────────────────────────────────
 function renderFilters(items) {
   const cats = [...new Set(items.map(r => r[COL.category]).filter(Boolean))].sort();
@@ -705,13 +715,13 @@ function renderFilters(items) {
     row.appendChild(btn);
   });
 }
- 
+
 function filterGear(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderGear(cat);
 }
- 
+
 // ── RENDER STATS ──────────────────────────────────────────────────────────
 function renderStats(items) {
   const current  = items.filter(r => r[COL.status] === 'Current');
@@ -721,7 +731,7 @@ function renderStats(items) {
   document.getElementById('stat-featured').textContent = featured.length;
   document.getElementById('stat-cats').textContent     = cats.size;
 }
- 
+
 // ── RENDER BUNDLES ────────────────────────────────────────────────────────
 function renderBundles() {
   document.getElementById('bundles-container').innerHTML = BUNDLES.map(b => `
@@ -733,16 +743,16 @@ function renderBundles() {
     </div>
   `).join('');
 }
- 
+
 // ── FETCH FROM GOOGLE SHEETS ──────────────────────────────────────────────
 async function loadGear() {
   try {
     const res  = await fetch(API_URL);
     const data = await res.json();
     if (!data.values) throw new Error('No data');
- 
+
     allItems = data.values.filter(r => r[COL.name]);
- 
+
     renderStats(allItems);
     renderFeatured(allItems);
     renderFilters(allItems);
@@ -761,7 +771,7 @@ async function loadGear() {
     renderBundles();
   }
 }
- 
+
 // ── EMAIL HANDLER ─────────────────────────────────────────────────────────
 function handleEmail(e) {
   e.preventDefault();
@@ -774,7 +784,7 @@ function handleEmail(e) {
   document.querySelector('.email-form').innerHTML =
     `<p style="color:var(--moss);font-size:0.8rem;letter-spacing:0.1em">✓ You're in. Watch your inbox.</p>`;
 }
- 
+
 // ── INIT ──────────────────────────────────────────────────────────────────
 loadGear();
 </script>
